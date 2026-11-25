@@ -23,22 +23,22 @@ dialog{background:var(--surface);color:var(--text);border:1px solid var(--line);
 .admin-only{display:none!important}.admin .admin-only:not([hidden]){display:revert!important}
 .admin .visitor-only{display:none!important}.admin .admin-heading{padding:35px 0 22px}
 .admin .admin-controls:not([hidden]){display:flex!important;gap:10px;flex-wrap:wrap}
-.admin .grid{padding-top:25px}.contact{margin-bottom:32px}.contact .actions{margin-top:15px}
+.admin .grid{padding-top:25px}.offline .online-only{display:none!important}.contact{margin-bottom:32px}.contact .actions{margin-top:15px}
 
 @media print{body{--bg:#fff!important;--surface:#fff!important;--text:#111!important;--muted:#333!important;--accent:#222!important;--line:#aaa!important}.top,.art,.actions,button,.status{display:none!important}.wrap{width:100%}.hero,.grid{display:block;padding:12px 0}.grid section{margin-bottom:18px}.entry{break-inside:avoid}}
 </style>
 </head><body class="motion-ready" data-theme="lime"><div class="top"><header class="wrap">
 <a class="brand" href="#haqimda"><span class="logo" aria-hidden="true">AI</span> Portfolio</a>
 <nav class="visitor-only" aria-label="Sahifa bo‘limlari"><a href="#haqimda">Haqimda</a><a href="#loyihalar">Loyihalar</a><a href="#sertifikatlar">Sertifikatlar</a><a href="#yangiliklar">Yangiliklar</a><a href="#aloqa">Aloqa</a></nav>
-<div class="tools"><a class="btn visitor-only" id="admin-link" href="/admin">Admin panel</a><a class="btn admin-only" href="/" hidden="">Saytni ko‘rish</a></div>
+<div class="tools"><a class="btn visitor-only" id="admin-link" href="/admin">Admin panel</a><a class="btn admin-only online-only" href="/" hidden="">Saytni ko‘rish</a></div>
 </header></div>
 <main class="wrap">
-<section class="admin-only admin-heading reveal is-visible" hidden=""><p class="eyebrow">PORTFOLIO BOSHQARUVI</p><h1>Admin panel</h1><div class="admin-only admin-controls" hidden=""><button class="btn primary" id="edit">Profilni tahrirlash</button><button class="btn" id="design">Dizayn</button><button class="btn" id="edit-contact">Aloqa</button><a class="btn" href="/admin/source.zip" download="">Kodni yuklash</a><button class="btn" id="export">HTML nusxani yuklash</button></div><p class="status" id="admin-status" role="status"></p></section>
+<section class="admin-only admin-heading reveal is-visible" hidden=""><p class="eyebrow">PORTFOLIO BOSHQARUVI</p><h1>Admin panel</h1><div class="admin-only admin-controls" hidden=""><button class="btn primary" id="edit">Profilni tahrirlash</button><button class="btn" id="design">Dizayn</button><button class="btn" id="edit-contact">Aloqa</button><a class="btn online-only" href="/admin/source.zip" download="">Kodni yuklash</a><button class="btn" id="export">Sayt HTMLini yuklash</button><button class="btn" id="export-admin">Admin HTMLni yuklash</button><button class="btn" id="backup">JSON nusxa</button><button class="btn" id="restore">JSON import</button><input id="backup-file" type="file" accept="application/json" hidden=""></div><p class="status" id="admin-status" role="status"></p></section>
 <section class="hero visitor-only reveal" id="haqimda">
 <div><p class="eyebrow">SHAXSIY REZYUME</p><h1 id="name">Abdurashidov Abdunosir</h1><p id="role" class="role">AI dasturlash mutaxassisi</p><p id="bio" class="bio">Sun’iy intellekt yordamida ma’lumotlarni tahlil qilish, matn bilan ishlash va takroriy jarayonlarni avtomatlashtirishga qiziqaman.</p><div class="actions"><a class="btn primary" href="#loyihalar">Loyihalarni ko‘rish</a><a class="btn" href="#aloqa">Bog‘lanish</a><button type="button" class="btn" id="print">PDF rezyume</button></div></div>
 <div class="art" aria-hidden="true"><span class="art-status mono">NEURAL SYSTEM ONLINE</span><div class="ai-system"><div class="ai-aura"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="orbit orbit-four"></div><i class="particle" style="--angle:18deg;--distance:126px;--speed:2.4s"></i><i class="particle" style="--angle:74deg;--distance:112px;--speed:3.1s"></i><i class="particle" style="--angle:147deg;--distance:132px;--speed:2.7s"></i><i class="particle" style="--angle:219deg;--distance:118px;--speed:3.6s"></i><i class="particle" style="--angle:301deg;--distance:128px;--speed:2.9s"></i><div class="data-arc"></div><div class="ai-core"><b>AI</b></div></div><span class="art-label mono">APPLIED AI / PORTFOLIO</span></div>
 </section>
-<section class="stack visitor-only reveal" aria-labelledby="stack-label"><span class="mono" id="stack-label">TEXNOLOGIYALAR</span><div class="chips" id="skills"><span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">LLM</span><span class="chip">RAG</span><span class="chip">FastAPI</span><span class="chip">Git</span></div></section>
+<section class="stack visitor-only reveal" aria-labelledby="stack-label"><span class="mono" id="stack-label">TEXNOLOGIYALAR</span><div class="chips" id="skills"><span class="chip">Clode</span><span class="chip">Antigravity</span><span class="chip">Deepseek</span><span class="chip">Gemini</span><span class="chip">Codex</span><span class="chip">GoogleFlow</span></div></section>
 <div class="grid">
 <section id="loyihalar" class="reveal is-visible"><div class="section-head"><div><div class="mono">GITHUB</div><h2>Loyihalar</h2></div><button class="btn add admin-only" data-kind="projects" hidden="">+ Havola</button></div><div class="list" id="projects"><article class="entry" style="--entry-delay: 0ms;"><h3>Resume maker</h3><p>Resume yaratishda odamlarga qulaylik keltiradigan sayt</p><a href="https://abdunosir2540-prog.github.io/Resume-maker/" target="_blank" rel="noopener noreferrer">Loyihani ochish</a><div class="actions admin-only admin-controls" hidden=""><button class="btn" type="button">Tahrirlash</button><button class="btn" type="button">O‘chirish</button></div></article><article class="entry" style="--entry-delay: 70ms;"><h3>Fitness pj</h3><p>Fitness zal yuritadigan odamlarga ijtimoiy tarmoqlar uchun post yaratib beradigan sayt oshiqcha vaqt sarflab 100 qator gap yozish shart emas</p><a href="https://abdunosir2540-prog.github.io/Fitness-pj/" target="_blank" rel="noopener noreferrer">Loyihani ochish</a><div class="actions admin-only admin-controls" hidden=""><button class="btn" type="button">Tahrirlash</button><button class="btn" type="button">O‘chirish</button></div></article><article class="entry" style="--entry-delay: 140ms;"><h3>Komptyuter savodxonlik</h3><p>Kompyuter savodxonligini 0 dan orgatadigan real loyiha unda har xil video darsliklar , kompyuter haqida fundamental bilimlarni olish mumkin va qaynoq klavishlarni ham organishi mumkin ctr+c, ctrl+v kabi</p><a href="https://abdunosir2540-prog.github.io/Kompyuter-savodxonligi/" target="_blank" rel="noopener noreferrer">Loyihani ochish</a><div class="actions admin-only admin-controls" hidden=""><button class="btn" type="button">Tahrirlash</button><button class="btn" type="button">O‘chirish</button></div></article><article class="entry" style="--entry-delay: 210ms;"><h3>3D uy rejasi</h3><p>Bu loyiha orqali ozingiz qurmoqchi bolgan uyni 0 dan dizaayni ozingiz tanlab yaratishingiz mumkin tashqi dizayn , ichki interyer dizaynlar kabi</p><a href="https://abdunosir2540-prog.github.io/3D-house/" target="_blank" rel="noopener noreferrer">Loyihani ochish</a><div class="actions admin-only admin-controls" hidden=""><button class="btn" type="button">Tahrirlash</button><button class="btn" type="button">O‘chirish</button></div></article><article class="entry" style="--entry-delay: 280ms;"><h3>Barbershop</h3><p>Sartarosh xona uchun web sayt</p><a href="https://abdunosir2540-prog.github.io/Barbershop/" target="_blank" rel="noopener noreferrer">Loyihani ochish</a><div class="actions admin-only admin-controls" hidden=""><button class="btn" type="button">Tahrirlash</button><button class="btn" type="button">O‘chirish</button></div></article></div></section>
 <section id="sertifikatlar" class="reveal is-visible"><div class="section-head"><div><div class="mono">MALAKA</div><h2>Sertifikatlar</h2></div><button class="btn add admin-only" data-kind="certs" hidden="">+ Yuklash</button></div><div class="list" id="certs"><div class="empty"><span class="symbol" aria-hidden="true">✓</span><span>Sertifikatlar hali yuklanmagan.</span></div></div></section>
@@ -49,10 +49,11 @@ dialog{background:var(--surface);color:var(--text);border:1px solid var(--line);
 <p id="status" class="status" role="status"></p>
 </main>
 <dialog id="dialog" aria-labelledby="dialog-title"><form id="form"><h3 id="dialog-title"></h3><div id="fields" class="list"></div><p id="error" role="alert" hidden=""></p><div class="tools"><button class="btn primary" id="save">Saqlash</button><button class="btn" type="button" id="cancel">Bekor qilish</button></div></form></dialog>
-<script>window.PORTFOLIO_SNAPSHOT={"name":"Abdurashidov Abdunosir","role":"AI dasturlash mutaxassisi","bio":"Sun’iy intellekt yordamida ma’lumotlarni tahlil qilish, matn bilan ishlash va takroriy jarayonlarni avtomatlashtirishga qiziqaman.","skills":"Python, Machine Learning, LLM, RAG, FastAPI, Git","email":"abdunosir2540@gmail.com","telegram":"Abdunosir_97","theme":"lime","projects":[{"title":"Resume maker","description":"Resume yaratishda odamlarga qulaylik keltiradigan sayt","url":"https://abdunosir2540-prog.github.io/Resume-maker/"},{"title":"Fitness pj","description":"Fitness zal yuritadigan odamlarga ijtimoiy tarmoqlar uchun post yaratib beradigan sayt oshiqcha vaqt sarflab 100 qator gap yozish shart emas","url":"https://abdunosir2540-prog.github.io/Fitness-pj/"},{"title":"Komptyuter savodxonlik","description":"Kompyuter savodxonligini 0 dan orgatadigan real loyiha unda har xil video darsliklar , kompyuter haqida fundamental bilimlarni olish mumkin va qaynoq klavishlarni ham organishi mumkin ctr+c, ctrl+v kabi","url":"https://abdunosir2540-prog.github.io/Kompyuter-savodxonligi/"},{"title":"3D uy rejasi","description":"Bu loyiha orqali ozingiz qurmoqchi bolgan uyni 0 dan dizaayni ozingiz tanlab yaratishingiz mumkin tashqi dizayn , ichki interyer dizaynlar kabi","url":"https://abdunosir2540-prog.github.io/3D-house/"},{"title":"Barbershop","description":"Sartarosh xona uchun web sayt","url":"https://abdunosir2540-prog.github.io/Barbershop/"}],"certs":[],"notes":[]};</script><script>
+<script>window.PORTFOLIO_SNAPSHOT={"name":"Abdurashidov Abdunosir","role":"AI dasturlash mutaxassisi","bio":"Sun’iy intellekt yordamida ma’lumotlarni tahlil qilish, matn bilan ishlash va takroriy jarayonlarni avtomatlashtirishga qiziqaman.","skills":"Clode , Antigravity , Deepseek , Gemini , Codex,  GoogleFlow","email":"abdunosir2540@gmail.com","telegram":"Abdunosir_97","theme":"lime","projects":[{"title":"Resume maker","description":"Resume yaratishda odamlarga qulaylik keltiradigan sayt","url":"https://abdunosir2540-prog.github.io/Resume-maker/"},{"title":"Fitness pj","description":"Fitness zal yuritadigan odamlarga ijtimoiy tarmoqlar uchun post yaratib beradigan sayt oshiqcha vaqt sarflab 100 qator gap yozish shart emas","url":"https://abdunosir2540-prog.github.io/Fitness-pj/"},{"title":"Komptyuter savodxonlik","description":"Kompyuter savodxonligini 0 dan orgatadigan real loyiha unda har xil video darsliklar , kompyuter haqida fundamental bilimlarni olish mumkin va qaynoq klavishlarni ham organishi mumkin ctr+c, ctrl+v kabi","url":"https://abdunosir2540-prog.github.io/Kompyuter-savodxonligi/"},{"title":"3D uy rejasi","description":"Bu loyiha orqali ozingiz qurmoqchi bolgan uyni 0 dan dizaayni ozingiz tanlab yaratishingiz mumkin tashqi dizayn , ichki interyer dizaynlar kabi","url":"https://abdunosir2540-prog.github.io/3D-house/"},{"title":"Barbershop","description":"Sartarosh xona uchun web sayt","url":"https://abdunosir2540-prog.github.io/Barbershop/"}],"certs":[],"notes":[]};</script><script>
 const $ = id => document.getElementById(id);
 const snapshot = window.PORTFOLIO_SNAPSHOT;
-const adminMode = !snapshot && location.pathname === '/admin';
+const offlineAdmin = Boolean(window.OFFLINE_ADMIN);
+const adminMode = offlineAdmin || (!snapshot && location.pathname === '/admin');
 const themes = {lime:'Grafit',blue:'Kobalt',paper:'Oq sahifa',violet:'Binafsha',amber:'Qahrabo'};
 function status(message) { $(adminMode?'admin-status':'status').textContent=message; }
 let data, revision, canEdit;
@@ -136,6 +137,18 @@ function render() {
   }
 }
 async function persist(next) {
+  if(offlineAdmin) {
+    let stored=true;
+    try {
+      localStorage.setItem('ai-portfolio-data',JSON.stringify(next));
+    } catch {
+      stored=false;
+    }
+    data=next;
+    render();
+    status(stored?'Kompyuterda saqlandi.':'Joriy oynada saqlandi. Yopishdan oldin yangi admin HTML yoki JSON nusxa yuklang.');
+    return;
+  }
   const res=await fetch('/api/portfolio',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:next,revision})});
   if(res.status===409) throw Error('Ma’lumot boshqa oynada yangilangan. Sahifani qayta oching.');
   if(!res.ok) throw Error('Saqlash amalga oshmadi. Fayl hajmini yoki internet aloqasini tekshiring.');
@@ -207,22 +220,73 @@ $('print').onclick=()=>window.print();
 $('design').onclick=()=>openEditor('design');
 $('edit-contact').onclick=()=>openEditor('contact');
 document.querySelectorAll('.add').forEach(x=>x.onclick=()=>openEditor(x.dataset.kind));
+function download(contents,filename,type) {
+  const url=URL.createObjectURL(new Blob([contents],{type}));
+  const link=element('a');link.href=url;link.download=filename;link.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function cleanCopy(copy) {
+  copy.querySelector('#offline-seed')?.remove();
+  copy.querySelector('dialog').removeAttribute('open');
+  copy.querySelector('#fields').replaceChildren();
+  copy.querySelector('#admin-status').textContent='';
+  copy.querySelector('#status').textContent='';
+}
 $('export').onclick=()=>{
   const copy=document.documentElement.cloneNode(true);
+  cleanCopy(copy);
   const script=document.createElement('script');
   script.textContent='window.PORTFOLIO_SNAPSHOT='+JSON.stringify(data).replaceAll('<',String.fromCharCode(92)+'u003c')+';';
   copy.querySelector('script').before(script);
-  copy.querySelector('body').classList.remove('admin');
+  copy.querySelector('body').classList.remove('admin','offline');
   copy.querySelectorAll('.admin-only').forEach(item=>item.setAttribute('hidden',''));
-  copy.querySelector('dialog').removeAttribute('open');
-  copy.querySelector('#status').textContent='';
-  copy.querySelector('#fields').replaceChildren();
-  const url=URL.createObjectURL(new Blob(['<!doctype html>',copy.outerHTML],{type:'text/html;charset=utf-8'}));
-  const link=element('a');link.href=url;link.download='ai-portfolio.html';link.click();
-  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  download('<!doctype html>'+copy.outerHTML,'index.html','text/html;charset=utf-8');
+};
+$('export-admin').onclick=()=>{
+  const copy=document.documentElement.cloneNode(true);
+  cleanCopy(copy);
+  const seed=document.createElement('script');
+  seed.id='offline-seed';
+  seed.textContent='window.OFFLINE_ADMIN=true;window.PORTFOLIO_SEED='+JSON.stringify(data).replaceAll('<',String.fromCharCode(92)+'u003c')+';';
+  copy.querySelector('script').before(seed);
+  copy.querySelector('body').classList.add('admin','offline');
+  copy.querySelectorAll('.admin-only').forEach(item=>item.removeAttribute('hidden'));
+  copy.querySelector('#backup-file').setAttribute('hidden','');
+  download('<!doctype html>'+copy.outerHTML,'admin.html','text/html;charset=utf-8');
+};
+$('backup').onclick=()=>{
+  download(JSON.stringify({version:1,data},null,2),'portfolio-backup.json','application/json;charset=utf-8');
+};
+$('restore').onclick=()=>$('backup-file').click();
+$('backup-file').onchange=async event=>{
+  const file=event.target.files[0];
+  if(!file) return;
+  try {
+    if(file.size>12*1024*1024) throw Error('JSON fayli 12 MB dan katta.');
+    const imported=JSON.parse(await file.text());
+    const next=imported.data || imported;
+    if(!next || typeof next.role!=='string' || typeof next.bio!=='string' ||
+      !Array.isArray(next.projects) || !Array.isArray(next.certs) || !Array.isArray(next.notes)) {
+      throw Error('Bu portfolio JSON nusxasi emas.');
+    }
+    await persist(next);
+    applyTheme(data.theme);
+    status('JSON nusxa tiklandi.');
+  } catch(err) {
+    status(err.message || 'JSON faylini o‘qib bo‘lmadi.');
+  } finally {
+    event.target.value='';
+  }
 };
 async function start() {
   if(snapshot) {data=snapshot;canEdit=false;}
+  else if(offlineAdmin) {
+    let stored;
+    try { stored=JSON.parse(localStorage.getItem('ai-portfolio-data')); } catch {}
+    data=stored || window.PORTFOLIO_SEED;
+    canEdit=true;revision=null;
+    document.body.classList.add('admin','offline');
+  }
   else {
     const res=await fetch('/api/portfolio');
     if(!res.ok) throw Error('Profilni yuklab bo‘lmadi.');
@@ -230,6 +294,7 @@ async function start() {
     if(adminMode && canEdit) document.body.classList.add('admin');
   }
   applyTheme(data.theme);render();initMotion();
+  if(offlineAdmin) status('Offline admin tayyor. O‘zgarishlar shu kompyuterda saqlanadi.');
 }
 start().catch(err=>status(err.message));
 </script></body></html>
